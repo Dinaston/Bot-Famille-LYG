@@ -1,0 +1,233 @@
+{
+  "nodes": [
+    {
+      "type": "command",
+      "name": "info",
+      "guid": "fc2d58c1-251d-433e-aa3e-bbc90fec514e",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "45f2297a-c9c8-44f3-a501-2515d33eb055"
+          ]
+        }
+      ],
+      "x": 60,
+      "y": 252
+    },
+    {
+      "type": "response",
+      "name": "get nom",
+      "guid": "45f2297a-c9c8-44f3-a501-2515d33eb055",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "nom",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "1f539e5e-0407-4fee-aa34-3b76f635d581"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "fc2d58c1-251d-433e-aa3e-bbc90fec514e"
+        }
+      ],
+      "x": 284,
+      "y": 243,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "nom",
+        "Text",
+        "temp",
+        "1"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "Get row",
+      "guid": "1f539e5e-0407-4fee-aa34-3b76f635d581",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "row is found",
+          "connections": [
+            "bd6ba728-eb0e-4774-8700-73ac48cb9256"
+          ]
+        },
+        {
+          "label": "row not found",
+          "connections": [
+            "842c7fc6-389d-4790-a0dd-dc5e4747b37f"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "45f2297a-c9c8-44f3-a501-2515d33eb055"
+        }
+      ],
+      "x": 544,
+      "y": 243,
+      "rtype": "Spreadsheet",
+      "rsubtype": "Get Row",
+      "formdata": [
+        "Famille.csv",
+        "diminutif",
+        "%%nom%%",
+        "famillerow",
+        "temp"
+      ],
+      "formnames": [
+        "selectedsheet",
+        "colheader",
+        "colval",
+        "rowvariable",
+        "saveVarType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "trouver",
+      "guid": "bd6ba728-eb0e-4774-8700-73ac48cb9256",
+      "reactionFields": [],
+      "embedfields": [
+        {
+          "name": "Nom RP :",
+          "value": "${tempVars.famillerow.nom}",
+          "inline": "false"
+        },
+        {
+          "name": "Steam ID :",
+          "value": "${tempVars.famillerow.steamid}",
+          "inline": "false"
+        },
+        {
+          "name": "Grade :",
+          "value": "${tempVars.famillerow.grade}",
+          "inline": "false"
+        },
+        {
+          "name": "Whitelist :",
+          "value": "${tempVars.famillerow.whitelist}",
+          "inline": "false"
+        },
+        {
+          "name": "Armes :",
+          "value": "${tempVars.famillerow.armes}",
+          "inline": "false"
+        },
+        {
+          "name": "Averto :",
+          "value": "${tempVars.famillerow.averto}",
+          "inline": "true"
+        },
+        {
+          "name": "ID Discord :",
+          "value": "${tempVars.famillerow.discordid}",
+          "inline": "false"
+        }
+      ],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "1f539e5e-0407-4fee-aa34-3b76f635d581"
+        }
+      ],
+      "x": 820,
+      "y": 193,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "$$CommandChannel$$",
+        "707070",
+        "${tempVars.famillerow.nom}",
+        "",
+        "FamilleXXXX",
+        "",
+        "",
+        "${tempVars.famillerow.nom} est un ${tempVars.famillerow.grade}",
+        "",
+        "",
+        "FamilleXXXX",
+        "BOOL_TRUE@@",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "pas trouver",
+      "guid": "842c7fc6-389d-4790-a0dd-dc5e4747b37f",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "1f539e5e-0407-4fee-aa34-3b76f635d581"
+        }
+      ],
+      "x": 838,
+      "y": 336,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "$$CommandChannel$$",
+        "je n'ai pas trouvé cette personne",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    }
+  ]
+}
