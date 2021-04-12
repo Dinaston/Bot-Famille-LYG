@@ -1,0 +1,14 @@
+{"level":"error","message":"Loading mods: Error: ENOENT: no such file or directory, scandir 'C:\\Users\\flomu\\dbs\\BotFiles\\mods'","service":"user-service"}
+{"level":"error","message":"Bot login: Error [TOKEN_INVALID]: An invalid token was provided.","service":"user-service"}
+{"level":"error","message":"Loading mods: Error: ENOENT: no such file or directory, scandir 'C:\\Users\\flomu\\dbs\\BotFiles\\mods'","service":"user-service"}
+{"level":"error","message":"Loading mods: Error: ENOENT: no such file or directory, scandir 'C:\\Users\\flomu\\dbs\\BotFiles\\mods'","service":"user-service"}
+{"level":"error","message":"Loading mods: Error: ENOENT: no such file or directory, scandir 'H:\\Famille BOT LYG\\BotFiles\\mods'","service":"user-service"}
+{"level":"error","message":"Bot login: Error [DISALLOWED_INTENTS]: Privileged intent provided is not enabled or whitelisted.","service":"user-service"}
+{"level":"error","message":"Loading mods: Error: ENOENT: no such file or directory, scandir 'H:\\Famille BOT LYG\\BotFiles\\mods'","service":"user-service"}
+{"level":"error","message":"Bot login: Error [DISALLOWED_INTENTS]: Privileged intent provided is not enabled or whitelisted.","service":"user-service"}
+{"level":"error","message":"Loading mods: Error: ENOENT: no such file or directory, scandir 'H:\\Famille BOT LYG\\BotFiles\\mods'","service":"user-service"}
+{"level":"error","message":"Loading mods: Error: ENOENT: no such file or directory, scandir 'H:\\Famille BOT LYG\\BotFiles\\mods'","service":"user-service"}
+{"level":"error","message":"Call next action: [fo test] TypeError: Cannot read property 'type' of undefined\n    at Object.DBS.callNextAction (H:\\Famille BOT LYG\\BotFiles\\bot.js:127:20)\n    at Object.module.exports.Message_Handle (H:\\Famille BOT LYG\\BotFiles\\Handlers\\Message.js:33:9)","service":"user-service"}
+{"level":"error","message":"Call next action: [fo test] TypeError: Cannot read property 'type' of undefined\n    at Object.DBS.callNextAction (H:\\Famille BOT LYG\\BotFiles\\bot.js:127:20)\n    at Object.module.exports.Message_Handle (H:\\Famille BOT LYG\\BotFiles\\Handlers\\Message.js:33:9)","service":"user-service"}
+{"level":"error","message":"Call next action: [fo test] TypeError: Cannot read property 'type' of undefined\n    at Object.DBS.callNextAction (H:\\Famille BOT LYG\\BotFiles\\bot.js:127:20)\n    at Object.module.exports.Message_Handle (H:\\Famille BOT LYG\\BotFiles\\Handlers\\Message.js:33:9)\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)","service":"user-service"}
+{"level":"error","message":"Call next action: [fo test] TypeError: Cannot read property 'type' of undefined\n    at Object.DBS.callNextAction (H:\\Famille BOT LYG\\BotFiles\\bot.js:127:20)\n    at Object.module.exports.Message_Handle (H:\\Famille BOT LYG\\BotFiles\\Handlers\\Message.js:33:9)\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)","service":"user-service"}

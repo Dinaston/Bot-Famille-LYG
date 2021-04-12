@@ -1,0 +1,23 @@
+{
+  "name": "bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "better-discord-antispam": "^1.0.6",
+    "discord-anti-spam": "^2.4.1",
+    "express": "^4.17.1",
+    "flatted": "^3.0.2",
+    "winston": "^3.2.1",
+    "discord.js": "^12.4.1",
+    "papaparse": "^5.2.0",
+    "node-fetch": "^2.6.1",
+    "setimmediate": "^1.0.5",
+    "@discordjs/form-data": "^3.0.1"
+  }
+}
