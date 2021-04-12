@@ -1,0 +1,97 @@
+{
+  "command": [
+    {
+      "name": "info",
+      "actions": [
+        {
+          "name": "get nom",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "varname": "nom",
+          "vartype": "Text",
+          "savevartype": "temp",
+          "param": "1"
+        },
+        {
+          "name": "Get row",
+          "category": "Spreadsheet",
+          "type": "Get Row",
+          "trueActions": [
+            {
+              "name": "trouver",
+              "category": "Message",
+              "type": "Send Embed",
+              "fields": [
+                {
+                  "name": "Nom RP :",
+                  "value": "${tempVars.famillerow.nom}",
+                  "inline": "false"
+                },
+                {
+                  "name": "Steam ID :",
+                  "value": "${tempVars.famillerow.steamid}",
+                  "inline": "false"
+                },
+                {
+                  "name": "Grade :",
+                  "value": "${tempVars.famillerow.grade}",
+                  "inline": "false"
+                },
+                {
+                  "name": "Whitelist :",
+                  "value": "${tempVars.famillerow.whitelist}",
+                  "inline": "false"
+                },
+                {
+                  "name": "Armes :",
+                  "value": "${tempVars.famillerow.armes}",
+                  "inline": "false"
+                },
+                {
+                  "name": "Averto :",
+                  "value": "${tempVars.famillerow.averto}",
+                  "inline": "true"
+                },
+                {
+                  "name": "ID Discord :",
+                  "value": "${tempVars.famillerow.discordid}",
+                  "inline": "false"
+                }
+              ],
+              "channelname": "$$CommandChannel$$",
+              "color": "707070",
+              "title": "${tempVars.famillerow.nom}",
+              "url": "",
+              "authorname": "FamilleXXXX",
+              "authorimageurl": "",
+              "authorlink": "",
+              "description": "${tempVars.famillerow.nom} est un ${tempVars.famillerow.grade}",
+              "thumbnail": "",
+              "image": "",
+              "footer": "FamilleXXXX",
+              "timestamp": "BOOL_TRUE@@",
+              "savetovariable": "",
+              "savetovariabletype": "temp"
+            }
+          ],
+          "falseActions": [
+            {
+              "name": "pas trouver",
+              "category": "Message",
+              "type": "Send Message",
+              "channelname": "$$CommandChannel$$",
+              "messagetext": "je n'ai pas trouvé cette personne",
+              "savetovariable": "",
+              "savetovariabletype": "temp"
+            }
+          ],
+          "selectedsheet": "Famille.csv",
+          "colheader": "diminutif",
+          "colval": "%%nom%%",
+          "rowvariable": "famillerow",
+          "savevartype": "temp"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+    "command": [
+        {
+            "name": "User Joins Server",
+            "perms": [],
+            "actions": [],
+            "var": {
+              "user": "newuser"
+            }
+        },
+        {
+            "name": "Any Message",
+            "perms": [],
+            "actions": [],
+            "var": {
+              "user": "msguser"
+            }
+        },
+        {
+            "name": "User Kicked",
+            "perms": [],
+            "actions": [],
+            "var": {
+              "user": "kickuser"
+            }
+        },
+        {
+            "name": "User Banned",
+            "perms": [],
+            "actions": [],
+            "var": {
+              "user": "banuser"
+            }
+        }
+    ]
+}
